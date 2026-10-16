@@ -1,0 +1,39 @@
+VERIFICACION REAL - 15 de octubre de 2026 (America/La_Paz)
+
+1. Compilacion local: correcta, 21 unidades C del repositorio oficial.
+   build/compile.log: sin diagnosticos en la compilacion final.
+2. prince.exe --version: SDLPoP v1.24 RC.
+3. PE32+ x64, machine 0x8664, subsistema Windows GUI (2).
+   No es un ejecutable DOS ni requiere un emulador.
+4. Dependencias directas: SDL2.dll y SDL2_image.dll incluidas, Kernel32
+   y API sets UCRT del sistema Windows. Las DLL incluidas son x64.
+5. Copias de los 25 DAT: SHA256 iguales a sus originales.
+6. Arranques con megahit 1, megahit 4 y megahit 13 --screenshot:
+   tres PNG generados y revisados visualmente, sin mensajes de error.
+   La captura del nivel 13 muestra LEVEL 12 por la secuencia final del juego.
+   La salida de este modo es 1 por diseno de auto_screenshot(), que llama
+   quit(1) despues de guardar; no se interpreta ese codigo como fallo.
+7. Arranque interactivo: ventana Prince of Persia (SDLPoP) v1.24 RC
+   detectada; proceso seguia respondiendo; stderr vacio.
+   Segundo arranque sin parametros ni trucos: proceso activo tras cuatro
+   segundos, sin errores en stdout/stderr; cerrado al terminar la prueba.
+8. Audio: SDL inicializa WASAPI, enumera Speaker (Realtek(R) Audio) y
+   abre correctamente el dispositivo por defecto a 44100 Hz, stereo S16.
+   Esta prueba verifica disponibilidad del dispositivo; no certifica la
+   calidad audible de toda la musica o efectos.
+
+LIMITACION DE LA PRUEBA INTERACTIVA
+La herramienta de captura de ventanas de Windows devolvio contenido de
+Codex en vez del juego, incluso tras reseleccionar y activar su ventana.
+No se verificaron visualmente el movimiento, combate, controles ni una
+partida completa. F12 por esa herramienta tampoco produjo una captura
+nueva; no se da por validada esa entrada. Los PNG de los niveles se
+obtuvieron mediante la funcion interna --screenshot del motor nativo.
+
+EVIDENCIA
+screenshots/screenshot_000.png: nivel 1, mazmorra y principe.
+screenshots/screenshot_001.png: nivel 4, palacio.
+screenshots/screenshot_002.png: inicio de la secuencia final.
+verification.json: formato, imports, hashes de binarios y DAT, audio.
+El proyecto conserva logs en build y verify_native.py para repetir la
+inspeccion sobre la instalacion local.

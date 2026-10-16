@@ -1,0 +1,97 @@
+{
+  "binaries": [
+    {
+      "file": "prince.exe",
+      "machine": "0x8664",
+      "format": "PE32+ x64",
+      "subsystem": 2,
+      "sha256": "2a9d03b66175f3acc92372786c9877d2950d128a0460140c991feab1eccce738",
+      "imports": [
+        "SDL2.dll",
+        "SDL2_image.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-private-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "KERNEL32.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll"
+      ]
+    },
+    {
+      "file": "SDL2.dll",
+      "machine": "0x8664",
+      "format": "PE32+ x64",
+      "subsystem": 3,
+      "sha256": "735e828f77918fb4067641b92d527761540755592e0999191f12c103bb300a70",
+      "imports": [
+        "ADVAPI32.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "SETUPAPI.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "VERSION.dll",
+        "WINMM.dll"
+      ]
+    },
+    {
+      "file": "SDL2_image.dll",
+      "machine": "0x8664",
+      "format": "PE32+ x64",
+      "subsystem": 2,
+      "sha256": "443696f9c533c01f5107b1ef65447f857ce7c4e2a5ba504776240b0156d01ba2",
+      "imports": [
+        "SDL2.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    }
+  ],
+  "original_dat_copies": {
+    "CDUNGEON.DAT": true,
+    "CPALACE.DAT": true,
+    "DIGISND1.DAT": true,
+    "DIGISND2.DAT": true,
+    "DIGISND3.DAT": true,
+    "EDUNGEON.DAT": true,
+    "EPALACE.DAT": true,
+    "FAT.DAT": true,
+    "GUARD.DAT": true,
+    "GUARD1.DAT": true,
+    "GUARD2.DAT": true,
+    "IBM_SND1.DAT": true,
+    "IBM_SND2.DAT": true,
+    "KID.DAT": true,
+    "LEVELS.DAT": true,
+    "MIDISND1.DAT": true,
+    "MIDISND2.DAT": true,
+    "PRINCE.DAT": true,
+    "PV.DAT": true,
+    "SHADOW.DAT": true,
+    "SKEL.DAT": true,
+    "TITLE.DAT": true,
+    "VDUNGEON.DAT": true,
+    "VIZIER.DAT": true,
+    "VPALACE.DAT": true
+  },
+  "audio": {
+    "init_result": 0,
+    "driver": "wasapi",
+    "output_devices": [
+      "Speaker (Realtek(R) Audio)"
+    ],
+    "opened_default_device": true,
+    "frequency": 44100
+  }
+}

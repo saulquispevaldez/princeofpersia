@@ -1,0 +1,58 @@
+PRINCE OF PERSIA CLASICO - WINDOWS x64 PORTABLE
+
+Abrir dist\Prince-of-Persia-Windows-x64\prince.exe.
+En el ZIP portable: extraer TODO y abrir prince.exe.
+No necesita DOSBox, emulador DOS ni instalacion. Mantener el ejecutable junto
+a SDL2.dll, SDL2_image.dll, los DAT y la carpeta data.
+Pulsar una tecla en la presentacion para comenzar la partida.
+
+CONTROLES
+Flechas: correr, saltar, subir, agacharse o bajar.
+Shift: recoger, agarrarse o atacar con la espada.
+Shift + izquierda/derecha: paso cuidadoso.
+Arriba durante la carrera: salto largo.
+Esc: pausa/menu. Alt+Enter: pantalla completa/ventana.
+Ctrl+S: activar/desactivar sonido. Ctrl+Q: salir.
+F6: guardado rapido. F9: carga rapida. F12: captura.
+La partida normal no activa trucos.
+
+PROCEDENCIA
+Motor: SDLPoP oficial de NagyD, v1.24 RC.
+Repositorio: https://github.com/NagyD/SDLPoP
+Commit: 3c5add5fb7f83d4ceb542823ab66d00146c4271b
+Compilado localmente desde C, sin modificar el codigo del motor.
+Compilador: Zig 0.13.0 (Clang), destino x86_64-windows-gnu, -O2.
+SDL2 2.30.11 y SDL2_image 2.8.4 oficiales, enlace dinamico.
+El ejecutable del juego NO se descargo precompilado.
+Los 25 DAT originales del usuario se copiaron sin cambios; se verificaron
+por SHA256. Los originales y el proyecto Ghidra no fueron modificados.
+Los archivos de data de SDLPoP se conservan como recursos auxiliares/fallback.
+La unica personalizacion de configuracion oculta su pantalla informativa
+inicial. Las correcciones de jugabilidad permanecen desactivadas para el
+comportamiento clasico; audio y musica estan habilitados.
+
+PRUEBAS Y LIMITES
+Ver PRUEBAS.txt y verification.json en la carpeta portable.
+
+LICENCIAS Y CREDITOS
+Prince of Persia original: Jordan Mechner / Broderbund y sus titulares.
+Motor SDLPoP: David Nagy y colaboradores; GPLv3 o posterior (COPYING).
+Creditos completos: README.md y los archivos fuente.
+opl3 y stb_vorbis conservan sus licencias dentro del archivo fuente.
+SDL2/SDL2_image: licencias en licenses.
+La licencia del motor no concede por si sola derechos sobre los recursos
+del juego original del usuario. Este paquete se preparo para su uso local.
+
+RECONSTRUIR
+Dentro del proyecto actual: .\build.ps1 desde PowerShell.
+El resultado se escribe en build\prince.exe.
+Dentro del paquete portable, abrir PowerShell en reconstruccion:
+1. .\prepare-tools.ps1 (requiere Internet, descarga herramientas oficiales
+   de versiones fijas, verifica SHA256 y extrae el codigo incluido).
+2. .\build.ps1
+3. Copiar build\prince.exe a la carpeta principal del juego.
+No se necesita instalar herramientas globales ni cambiar el PATH.
+El archivo SDLPoP-source.zip contiene el arbol fuente completo del commit
+utilizado; se incluye tambien el comando de compilacion en build.ps1.
+Los hashes de descarga fijan los insumos; no se afirma identidad bit a bit
+entre compilaciones en sistemas o rutas diferentes.
